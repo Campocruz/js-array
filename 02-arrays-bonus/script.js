@@ -37,9 +37,14 @@ console.log(longNames);
 // const longNames = teachers.filter(teachers => teachers.length >= 5);
 
 // 3. Rimuovi 'Ed' dall'array teachers
+
+// Base
 const removeIndex = teachers.indexOf('Ed');
 teachers.splice(removeIndex, 1);
 console.log(teachers);
+
+// Con Funzione
+removeIndexArray(teachers, 'Luca');
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
@@ -72,3 +77,12 @@ console.log(teachersString);
 // Avanzato
 // teachersString = teachers.join(', ');
 // console.log(teachersString);
+
+// Creo una nuova funzione
+
+function removeIndexArray(myArray, myString){
+  if(myArray === null || myString === ''){return}
+  if(myArray.length === 1){return myArray}
+  const indexRemove = myArray.indexOf(myString);
+  myArray.splice(indexRemove, 1);
+}
