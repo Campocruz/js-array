@@ -21,6 +21,10 @@ console.log(reversedTeachers);
 // Avanzato
 // const reversedTeachers = teachers.toReversed();
 
+// Richiamo Funzione
+const secondrevers = reverseList(teachers);
+console.log(teachers);
+
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
 // con un nome di lunghezza maggiore o uguale a 5 caratteri
 
@@ -100,4 +104,13 @@ function checkString(myArray, myString) {
     if (myArray[i] === myString) { return true }
   }
   return false
+}
+
+function reverseList(list) {
+  let reversList;
+  if (list === null) { return }
+  for (let i = list.length - 1; i >= 0; i--) {
+    reversList = list[i];
+  }
+  return reversList
 }
