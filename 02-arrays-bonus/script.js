@@ -50,10 +50,11 @@ for (let i = 0; i < teachers.length; i++) {
     break;
   }
 }
-
 console.log(isFabioPresent);
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
+
+// Base
 let teachersString;
 for (let i = 0; i < teachers.length; i++) {
   const subString = teachers[i];
@@ -67,3 +68,7 @@ for (let i = 0; i < teachers.length; i++) {
     teachersString = teachersString + subString
 }
 console.log(teachersString);
+
+// Avanzato
+// teachersString = teachers.join(', ');
+// console.log(teachersString);
