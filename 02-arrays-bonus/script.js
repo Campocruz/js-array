@@ -43,11 +43,13 @@ const removeIndex = teachers.indexOf('Ed');
 teachers.splice(removeIndex, 1);
 console.log(teachers);
 
-// Con Funzione
+// Invocazione Funzione
 removeIndexArray(teachers, 'Luca');
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
+
+// Base
 let isFabioPresent = false;
 for (let i = 0; i < teachers.length; i++) {
   if (teachers[i] === 'Fabio') {
@@ -56,6 +58,10 @@ for (let i = 0; i < teachers.length; i++) {
   }
 }
 console.log(isFabioPresent);
+
+// Invocazione Funzione
+const isNamePresent = checkString(teachers, 'Fabio')
+console.log(isNamePresent);
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
 
@@ -80,9 +86,18 @@ console.log(teachersString);
 
 // Creo una nuova funzione
 
-function removeIndexArray(myArray, myString){
-  if(myArray === null || myString === ''){return}
-  if(myArray.length === 1){return myArray}
+function removeIndexArray(myArray, myString) {
+  if (myArray === null || myString === '') { return }
+  if (myArray.length === 1) { return myArray }
   const indexRemove = myArray.indexOf(myString);
   myArray.splice(indexRemove, 1);
+}
+
+function checkString(myArray, myString) {
+  if (myArray === null || myArray === '') { return false }
+  if (myArray.length === 1 && myString === myArray[0]) { return true }
+  for (let i = 0; i < myArray.length; i++) {
+    if (myArray[i] === myString) { return true }
+  }
+  return false
 }
