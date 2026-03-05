@@ -107,10 +107,10 @@ function checkString(myArray, myString) {
 }
 
 function reverseList(list) {
-  let reversList;
+  const reversList = [];
   if (list === null) { return }
   for (let i = list.length - 1; i >= 0; i--) {
-    reversList = list[i];
+    reversList.push(list[i]);
   }
   return reversList
 }
